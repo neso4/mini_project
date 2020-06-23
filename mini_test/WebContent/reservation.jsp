@@ -10,26 +10,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <%
+    String checkin = request.getParameter("checkin");
+    String checkout = request.getParameter("checkout");
+    %>
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
-	<div class="container">
-		<h3 class="display-3">예약하기</h3>
-		<hr>
+	<div class="jumbotron" style="background-color:aliceblue;">
+		<div class="container">
+			<h3 class="display-3">예약하기</h3>
+			<hr>
+		</div>
 	</div>
 	<div class="container">
-		<!-- 메일인지 게시판인지 아직 못 정함 -->
-		<form action="contact_program.jsp" class="form-horizontal" method="POST" name="reservation">
+		<form action="reservation_process.jsp" class="form-horizontal" method="POST" name="reservation">
 			<div class="form-group row">
 				<label class="col-sm-2">체크인</label>
 				<div class="col-sm-3">
-					<input 	type="date" class="form-control" name="checkin">
+					<input 	type="date" class="form-control" name="checkin" value="checkin">
 			</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2">체크아웃</label>
 				<div class="col-sm-3">
-					<input 	type="date" class="form-control" name="checkout">
+					<input 	type="date" class="form-control" name="checkout" check="checkout">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -37,9 +42,9 @@
 				<div class="col-sm-3">
       				<select class="form-control" name="room">
         				<option selected>객실</option>
-        					<option value="1">오션뷰</option>
-        					<option value="2">가든뷰</option>
-        					<option value="3">프리미엄 스위트룸</option>
+        					<option value="1">퍼시픽 스위트룸</option>
+        					<option value="2">프레지덴셜 스위트룸</option>
+        					<option value="3">펜트하우스 ㅇㅇㅇ룸</option>
      				</select>
      			</div>
 			</div>

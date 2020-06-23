@@ -17,16 +17,16 @@
 	<nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top  justify-content-end">
     	<ul class="navbar-nav">
         	<li class="nav-item">
-            	<a class="nav-link" href="about-us.html">About Us</a>
+            	<a class="nav-link" href="about-us.jsp">About Us</a>
         	</li>
         	<li class="nav-item">
-            	<a class="nav-link" href="rooms.html">Rooms</a>
+            	<a class="nav-link" href="rooms.jsp">Rooms</a>
         	</li>
         	<li class="nav-item">
-            	<a class="nav-link" href="facilities.html">Facilities</a>
+            	<a class="nav-link" href="facilities.jsp">Facilities</a>
         	</li>
         	<li class="nav-item">
-            	<a class="nav-link" href="contact-us.html">Contact Us</a>
+            	<a class="nav-link" href="contact-us.jsp">Contact Us</a>
         	</li>
         	<li class="nav-item">
             <a class="nav-link" href="#">Book Now</a>

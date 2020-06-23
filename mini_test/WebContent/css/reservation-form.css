@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img{
+    border: 0;
+}
+.main_container {
+    width: 75%;
+    margin: 0 auto;
+    height: inherit;
+    padding: 10px 10px 10px 10px;
+    display: block;
+}
+body {
+    /*현재 페이지의 모든 폰트에 적용됨*/
+    font-family: 'Noto Sans KR', sans-serif;
+}
