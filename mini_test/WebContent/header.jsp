@@ -29,7 +29,7 @@
             	<a class="nav-link" href="contact-us.jsp">Contact Us</a>
         	</li>
         	<li class="nav-item">
-            <a class="nav-link" href="#">Book Now</a>
+            <a class="nav-link" href="rooms.jsp">Book Now</a>
         	</li>
     	</ul>
 	</nav>

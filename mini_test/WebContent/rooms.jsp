@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="UTF-8">
-   <title>객실 안내</title>
-   <!--부트스트랩 import-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   	<meta charset="UTF-8">
+   	<title>객실 안내</title>
+   	<!--부트스트랩 import-->
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -43,7 +43,7 @@
                    문을 나서면 눈앞에 바다가 펼쳐지며, 실내 공간과 야외 공간이 최적의 조화를 이루도록 설계되었습니다.  <br>
                    싱그러운 바나나 잎 벽지와 바다의 향취가 담긴 인테리어로 휴양지에 있는듯한 생생한 느낌이 듭니다. <br>
                 </p>
-                <a href="#" class="btn btn-primary" style="float: right;">예약</a>
+                <a href="pacific-suite.jsp" class="btn btn-primary" style="float: right;">예약</a>
             </div>
         </div>
         <div class="card" width="100%" style="margin-bottom: 10px;">

@@ -13,6 +13,12 @@
     <%
     String checkin = request.getParameter("checkin");
     String checkout = request.getParameter("checkout");
+	int adults = Integer.parseInt(request.getParameter("adults"));
+	int kids = Integer.parseInt(request.getParameter("kids"));
+	int roomType = Integer.parseInt(request.getParameter("room"));
+	String total = request.getParameter("total");
+	String price = request.getParameter("price");
+	String vat = request.getParameter("total");
     %>
 </head>
 <body>
@@ -28,24 +34,58 @@
 			<div class="form-group row">
 				<label class="col-sm-2">체크인</label>
 				<div class="col-sm-3">
-					<input 	type="date" class="form-control" name="checkin" value="checkin">
-			</div>
+					<input 	type="date" class="form-control" name="checkin" value="<%=checkin %>" readonly>
+				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2">체크아웃</label>
 				<div class="col-sm-3">
-					<input 	type="date" class="form-control" name="checkout" check="checkout">
+					<input 	type="date" class="form-control" name="checkout" value="<%=checkout %>" readonly>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2">어른</label>
+				<div class="col-sm-3">
+					<input 	type="number" class="form-control" name="adults" value="<%=adults %>" readonly>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2">어린이</label>
+				<div class="col-sm-3">
+					<input 	type="number" class="form-control" name="kids" value="<%=kids %>" readonly>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2">가격</label>
+				<div class="col-sm-3">
+					<input 	type="text" class="form-control" name="total" value="<%=total %>" readonly>
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2" for="room">객실</label>
 				<div class="col-sm-3">
-      				<select class="form-control" name="room">
-        				<option selected>객실</option>
-        					<option value="1">퍼시픽 스위트룸</option>
-        					<option value="2">프레지덴셜 스위트룸</option>
-        					<option value="3">펜트하우스 ㅇㅇㅇ룸</option>
+				<%
+				if(roomType == 1) {
+					%>
+					<select class="form-control" name="room" >
+        				<option>객실</option>
+        					<option value="1" selected>퍼시픽 스위트</option>
      				</select>
+					<%
+				} else if (roomType == 2) {%>
+				
+      				<select class="form-control" name="room">
+        				<option>객실</option>
+        					<option value="2" selected>프레지덴셜 스위트</option>
+     				</select>
+     				<%
+				} else if(roomType == 3) {%>
+				    <select class="form-control" name="room">
+        				<option>객실</option>
+        					<option value="3" selected>펜트하우스 스위트</option>
+     				</select>
+				
+				<%} %>
      			</div>
 			</div>
 			<div class="form-group row">
@@ -58,7 +98,7 @@
 				<label class="col-sm-2">이메일</label>
 			<div class="col-sm-3">
 					<input 	type="text" class="form-control"
-							name="productID">
+							name="email">
 				</div>
 			</div>
 			<div class="form-group row">

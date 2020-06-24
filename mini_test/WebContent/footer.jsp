@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<title>푸우우우우우터</title>
 </head>
-<body style="background-color:#F5F5F5;'">
+<body style="background-color:#FAFAFA;'">
 	
 	<footer class="container">
 		<p>
