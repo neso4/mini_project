@@ -14,9 +14,9 @@
 <body>
 	<jsp:include page="header.jsp"/>
 	<div class="container">
-		<h3 class="display-3">예약하기</h3>
-		<hr>
+		<h1 class="display-4">문의하기</h3>
 	</div>
+	<hr>
 	<div class="container">
 		<!-- 메일인지 게시판인지 아직 못 정함 -->
 		<form action="contact_program.jsp" class="form-horizontal" method="POST" name="contact">

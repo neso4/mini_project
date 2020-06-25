@@ -17,8 +17,6 @@
 	String email = request.getParameter("email");
 	String requirement = request.getParameter("requirement");
 	String phone = request.getParameter("phone");
-	out.println(checkin);
-	out.println(checkout);
 	%>
 </head>
 <body>
@@ -43,6 +41,7 @@
 		ps.setString(3, phone);
 		ps.executeUpdate();
 		
+		response.sendRedirect("reservation_completed.jsp");
 	} catch (SQLException e) {
 		out.println("DB 연동 오류");
 	}

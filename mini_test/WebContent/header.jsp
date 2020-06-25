@@ -9,7 +9,7 @@
 <body>
 		<!--맨 위에 로고 있는 곳(header)-->
 	<div class="container-fluid" style="background-color: #FFFFFF;">
-    	<a class="navbar-brand" href="index.html">
+    	<a class="navbar-brand" href="index.jsp">
         	<img src="img/logo_edited.jpg" height="100px">
     	</a>
 	</div>

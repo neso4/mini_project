@@ -16,6 +16,7 @@
    <div class="container">
     <section align="center">
         <h1>객실 안내</h1>
+        <hr>
         <div class="media">
             <div class="media-body">
              <br>
@@ -32,10 +33,11 @@
             
             </div>
         </div>
+        <hr>
         <!--객실 안내-->
         <div class="card" width="100%" style="margin-bottom: 10px;">
             <div class="card-body">
-                <img src="img/placeholder.jpg" width="30%" style="float: left; padding-right: 10px;">
+                <img src="img/room1.jpg" width="30%" style="float: left; padding-right: 10px;">
                 <h5 class="card-title">퍼시픽 스위트</h5>
                 <p class="card-text">
                    더 넓은 공간과 편안함을 선사하는 퍼시픽 스위트는 분리된 거실 공간 및 침실과 함께,  <br>
@@ -48,7 +50,7 @@
         </div>
         <div class="card" width="100%" style="margin-bottom: 10px;">
             <div class="card-body">
-                <img src="img/placeholder.jpg" width="30%" style="float: left; padding-right: 10px;">
+                <img src="img/room2.jpg" width="30%" style="float: left; padding-right: 10px;">
                 <h5 class="card-title">프레지덴셜 스위트</h5>
                 <p class="card-text">
                     5-7층에 자리한 투베드룸 스위트로, 세련된 분위기의 여유로운 공간을 선사합니다.<br>
@@ -60,7 +62,7 @@
         </div>
         <div class="card" width="100%" style="margin-bottom: 10px;" style="float: right;">
             <div class="card-body">
-                <img src="img/placeholder.jpg" width="30%" style="float: left; padding-right: 10px;">
+                <img src="img/room3.jpg" width="30%" style="float: left; padding-right: 10px;">
                 <h5 class="card-title">펜트하우스 스위트</h5>
                 <p class="card-text">
                     포브스 지가 “하와이 모든 섬의 호텔 스위트룸 가운데 가장 드라마틱한 감동을 선사”한다고 극찬한 스위트입니다. <br>
