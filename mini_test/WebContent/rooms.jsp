@@ -57,7 +57,7 @@
                                                완벽한 태평양 전망이 펼쳐지는 각 침실은 독특한 인테리어를 선보이며,  <br>
                                                루프탑 스카이 테라스와 라운지가 전용 계단으로 연결됩니다.
                 </p>
-                <a href="#" class="btn btn-primary" style="float: right;">예약</a>
+                <a href="presidential-suite.jsp" class="btn btn-primary" style="float: right;">예약</a>
             </div>
         </div>
         <div class="card" width="100%" style="margin-bottom: 10px;" style="float: right;">

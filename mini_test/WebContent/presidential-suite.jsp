@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>퍼시픽 스위트</title>
+	<title>프레지덴셜 스위트</title>
 	<!--부트스트랩 import-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,7 +15,7 @@
 	<jsp:include page="header.jsp"/>
 		<div class="jumbotron" style="background-color:aliceblue;">
 			<div class="container">
-				<h1 class="display-4">퍼시픽 스위트룸</h1>
+				<h1 class="display-4">프레지덴셜 스위트</h1>
 			</div>
 		</div>
 		<div class="container">
@@ -24,16 +24,16 @@
 					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   						<div class="carousel-inner">
     						<div class="carousel-item active">
-      							<img src="img/pacific.jpg" class="d-block w-100" alt="...">
+      							<img src="img/placeholder.jpg" class="d-block w-100" alt="...">
     						</div>
     						<div class="carousel-item">
-      							<img src="img/pacific2.jpg" class="d-block w-100" alt="...">
+      							<img src="img/placeholder.jpg" class="d-block w-100" alt="...">
     						</div>
     						<div class="carousel-item">
-      							<img src="img/pacific3.jpg" class="d-block w-100" alt="...">
+      							<img src="img/placeholder.jpg" class="d-block w-100" alt="...">
     						</div>
     						<div class="carousel-item">
-      							<img src="img/pacific4.jpg" class="d-block w-100" alt="...">
+      							<img src="img/placeholder.jpg" class="d-block w-100" alt="...">
     						</div>
   						</div>
   						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -48,7 +48,7 @@
 				</div>
 				<div class="col-md-6">
 					<!-- room 파라미터 페이지마다 바꿀 것 -->
-					<form action="calc.jsp?room=1" method="POST">
+					<form action="calc.jsp?room=2" method="POST">
 						<table class="table">
 							<tr>
 								<th>체크인</th>
