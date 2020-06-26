@@ -13,8 +13,8 @@
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
-	<div class="container">
-		<h1 class="display-4">문의하기</h3>
+	<div align="center" class="container">
+		<h1 class="display-4">Contact us</h1>
 	</div>
 	<hr>
 	<div class="container">
