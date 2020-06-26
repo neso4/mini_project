@@ -70,8 +70,9 @@
                 <a href="#" class="btn btn-primary" style="float: right;">예약</a>
             </div>
         </div>
+        
         <hr>
-          
+         
         </section>
     </div>
    <jsp:include page="footer.jsp"/>
