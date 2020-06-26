@@ -71,7 +71,7 @@
             </div>
         </div>
         <hr>
-          <br> <br> <br> <br> 
+          
         </section>
     </div>
    <jsp:include page="footer.jsp"/>
