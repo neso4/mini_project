@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>헤에에에에더</title>
+<title>헤더</title>
 </head>
 <body>
 		<!--맨 위에 로고 있는 곳(header)-->
