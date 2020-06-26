@@ -15,11 +15,12 @@
 	<jsp:include page="header.jsp"/>
     <div align="center" class="container">
     <h1><b>Facilities</b></h1>
+     <b><hr></b>
     </div>
     
     
     
-    <b><hr></b>
+   
 	<div align="center" class="container">
     <dl><br>
      <dt>
