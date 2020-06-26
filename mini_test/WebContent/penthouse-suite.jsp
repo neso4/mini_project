@@ -15,7 +15,7 @@
 	<jsp:include page="header.jsp"/>
 		<div class="jumbotron" style="background-color:aliceblue;">
 			<div class="container">
-				<h1 class="display-4">펜트하우스 스위트</h1>
+				<h1 align="center" class="display-4">Penthouse Suite</h1>
 			</div>
 		</div>
 		<div class="container">
@@ -114,6 +114,7 @@
 				</div>
 			</div>
 		</div>
+		<br> <br> <br> <br> 
 	<jsp:include page="footer.jsp"/>
 </body>
 </html>
