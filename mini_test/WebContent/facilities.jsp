@@ -58,7 +58,7 @@
      <dd>Cardio Zone, Strength Zone, Free Weight Zone, Stretching Zone 등의 공간이 최적의 편리함을 제공하며, </dd>
       <dd>또한 전문강사들의 퍼스널 트레이닝, 필라테스 강습 프로그램을 통하여 고객의 다양한 스타일을 충족시켜 드립니다.</dd>
   </dl>
-  <br> <br> <br> <br>   
+    
  </div>
  <jsp:include page="footer.jsp"/>
 </body>
