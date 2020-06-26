@@ -43,7 +43,7 @@
 		
 		response.sendRedirect("reservation_completed.jsp");
 	} catch (SQLException e) {
-		out.println("DB 연동 오류");
+		out.println("DB 연동 오류 : " + e.getMessage());
 	}
 	%>
 </body>

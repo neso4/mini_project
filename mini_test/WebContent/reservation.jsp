@@ -122,7 +122,7 @@
 			<div class="form-group row">
 				<label class="col-sm-2">요구 사항</label>
 				<div class="col-sm-6">
-					<textarea class="form-control" name="description"></textarea>
+					<textarea class="form-control" name="requirement"></textarea>
 				</div>
 			</div>
 			<div class="form-group row" align="center">
