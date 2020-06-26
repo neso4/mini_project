@@ -43,7 +43,7 @@
         <dd>간단한 식사나 애프터눈 티세트와 함께 커피와 차 또는 칵테일을 주변을 한눈에 내려다 볼 수 있는 <br>
           최고의 전망과 함께 편안하게 술과 음악을 즐겨보시기 바랍니다.</dd>
 
-       <img src="img/f3.jpg" vspace="40px" width="870px"/>
+       <a name="stop"><img src="img/f3.jpg" vspace="40px" width="870px"/></a>
       <h3><b>Mandala Spa</b></h3>
      <hr align="center" style="color: rgb(56, 53, 53); width: 30%;">
       <dt>바쁜 도시의 일상에서 벗어난 변치 않는 휴식
