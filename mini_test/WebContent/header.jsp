@@ -17,7 +17,7 @@
 	<nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top  justify-content-end">
     	<ul class="navbar-nav">
     		<li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.jsp">Home</a>
         	</li>
         	<li class="nav-item">
             	<a class="nav-link" href="about-us.jsp">About Us</a>
