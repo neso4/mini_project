@@ -15,7 +15,7 @@
 	<jsp:include page="header.jsp"/>
 		<div class="jumbotron" style="background-color:aliceblue;">
 			<div class="container">
-				<h1 class="display-4">퍼시픽 스위트룸</h1>
+				<h1 align="center" class="display-4">Pacific Suite</h1>
 			</div>
 		</div>
 		<div class="container">
