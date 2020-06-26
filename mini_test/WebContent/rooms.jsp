@@ -28,9 +28,11 @@
             
             
             </div>
+            
         </div>
         <hr>
         <!--객실 안내-->
+         <br> 
         <div class="card" width="100%" style="margin-bottom: 10px;">
             <div class="card-body">
                 <img src="img/room1.jpg" width="30%" style="float: left; padding-right: 10px;">
@@ -69,7 +71,7 @@
             </div>
         </div>
         <hr>
-           
+          <br> <br> <br> <br> 
         </section>
     </div>
    <jsp:include page="footer.jsp"/>
