@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>푸우우우우우터</title>
+	<title>푸터</title>
 </head>
 <body style="background-color:#FAFAFA;'">
 	
