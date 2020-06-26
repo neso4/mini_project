@@ -87,7 +87,7 @@
                 	모닝 커피와 함께 편안한 휴식을 취하거나 해가 질 무렵 칵테일잔을 기울이며 일몰을 감상하며, 
                 	루아우 호텔의 침대에서 편안한 휴식을 즐겨보세요.
                 </p>
-                <a href="#" class="card-link">Another link</a>
+                <a href="rooms.jsp" class="card-link">Another link</a>
             </div>
         </div>
         <!--두 번째 칸-->
@@ -100,7 +100,7 @@
                 	수영장의 선데크에서 느긋하게 누워 있거나 수영장 바에서 신선한 칵테일을 경험해보세요. 
                 	또한 고객을 위한 대형 컨벤션 홀, 미팅 룸들도 자유롭게 이용해 보세요.
                 </p>
-                <a href="#" class="card-link">Another link</a>
+                <a href="facilities.jsp" class="card-link">Another link</a>
             </div>
         </div>
         <!--세 번째 칸-->
@@ -112,7 +112,7 @@
                 	셀 수 없이 많은 리조트 액티비티와 관광 명소를 비롯해 언제나 볼거리와
                 	즐길거리로 가득 찬 루아우 호텔에서 특별한 경험을 체험해보세요. 
                 </p>
-                <a href="#" class="card-link">Another link</a>
+                <a href="facilities.jsp#stop" class="card-link">Another link</a>
             </div>
         </div>
     </div>
