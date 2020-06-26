@@ -15,7 +15,7 @@
    <jsp:include page="header.jsp"/>
    <div class="container">
     <section align="center">
-        <h1>객실 안내</h1>
+        <h1>Rooms</h1>
         <hr>
         <div class="media">
             <div class="media-body">
