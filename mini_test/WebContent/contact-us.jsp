@@ -15,8 +15,9 @@
 	<jsp:include page="header.jsp"/>
 	<div align="center" class="container">
 		<h1 class="display-4">Contact us</h1>
+		<hr>
 	</div>
-	<hr>
+	
 	<div class="container">
 		<!-- 메일인지 게시판인지 아직 못 정함 -->
 		<form action="contact_program.jsp" class="form-horizontal" method="POST" name="contact">
@@ -69,7 +70,9 @@
 				</div>
 			</div>
 		</form>
+	<hr>	
 	</div>
+	
 	<jsp:include page="footer.jsp"/>
 </body>
 </html>
