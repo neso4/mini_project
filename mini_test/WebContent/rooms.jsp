@@ -15,24 +15,26 @@
    <jsp:include page="header.jsp"/>
    <div class="container">
     <section align="center">
-        <h1>Rooms</h1>
+        <h1>객실 안내</h1>
         <hr>
         <div class="media">
             <div class="media-body">
              <br>
-              
+               <h5>객실</h5>
                루아우 호텔은  객실 모두가 전용 베란다를 갖추고 있으며, 스마트하고 직관적이며 유행을 타지 않는 스타일로 설계되었습니다.<br>
                각 객실의 구조는 자유로움을 느낌을 그대로 전달하는 동시에 넉넉한 공간과 산뜻한 흰색 침구 및 다목적 가구를 구비하고 있습니다. <br> 
                단체 고객을 위한 스위트, 리젠시 클럽 라운지 이용 혜택, 환상적인 바다 또는 산 전망 등 편안함을 누릴 수 있는 기회가 무궁무진합니다.<br>
                 <br>
-            
+            <h5>환상적인 전망</h5>
+            모든 객실에는 세련된 안락 의자를 갖춘 전용 베란다가 포함되어 있습니다. <br>
+            각 객실의 구조는 자유로움을 느낌을 그대로 전달하는 동시에 넉넉한 공간과 산뜻한 흰색 침구 및 다목적 가구를 구비하고 있습니다. <br>
+            모닝 커피와 함께 편안한 휴식을 취하거나 해가 질 무렵 칵테일잔을 기울이며 일몰을 감상하며, 
+            루아우 호텔의 침대에서 편안한 휴식을 즐겨보세요.<br>
             
             </div>
-            
         </div>
         <hr>
         <!--객실 안내-->
-         <br> 
         <div class="card" width="100%" style="margin-bottom: 10px;">
             <div class="card-body">
                 <img src="img/room1.jpg" width="30%" style="float: left; padding-right: 10px;">
@@ -63,16 +65,15 @@
                 <img src="img/room3.jpg" width="30%" style="float: left; padding-right: 10px;">
                 <h5 class="card-title">펜트하우스 스위트</h5>
                 <p class="card-text">
-                    포브스 지가 “하와이 모든 섬의 호텔 스위트룸 가운데 가장 드라마틱한 감동을 선사”한다고 <br>
-                    극찬한 스위트입니다. 8-10층에 위치한 넓은 전용 베란다에 환상적인 태평양의 풍광이 하루종일 펼쳐지며,  <br>
+                    포브스 지가 “하와이 모든 섬의 호텔 스위트룸 가운데 가장 드라마틱한 감동을 선사”한다고 극찬한 스위트입니다. <br>
+                    8-10층에 위치한 넓은 전용 베란다에 환상적인 태평양의 풍광이 하루종일 펼쳐지며,  <br>
                     투베드룸과 함께 여유로운 공간의 인테리어가 가족 또는 친구와의 여행에 넉넉한 만족을 선사합니다.
                 </p>
-                <a href="#" class="btn btn-primary" style="float: right;">예약</a>
+                <a href="presidential-suite.jsp" class="btn btn-primary" style="float: right;">예약</a>
             </div>
         </div>
-        
         <hr>
-         
+           
         </section>
     </div>
    <jsp:include page="footer.jsp"/>
