@@ -80,7 +80,7 @@
         <div class="card">
             <!--첫 번째 칸-->
             <div class="card-body text-center">
-                <img src="img/placeholder.jpg" width="308">
+                <img src="img/index9.jpg" width="308">
                 <p class="card-text">편안한 휴식</p>
                 <p class="card-text">
                 	모든 객실에는 세련된 안락 의자를 갖춘 전용 베란다가 포함되어 있습니다.  
@@ -93,7 +93,7 @@
         <!--두 번째 칸-->
         <div class="card ">
             <div class="card-body text-center">
-                <img src="img/placeholder.jpg" width="308">
+                <img src="img/index10.jpg" width="308">
                 <p class="card-text">다양한 부대 시설</p>
                 <p class="card-text">
                 	루아우 호텔의 최신식 24시간 피트니스 센터에서 활기차게 운동하고 야외 
@@ -106,11 +106,12 @@
         <!--세 번째 칸-->
         <div class="card">
             <div class="card-body text-center">
-                <img src="img/placeholder.jpg" width="308">
+                <img src="img/index11.jpg" width="308">
                 <p class="card-text">스페셜 액티비티</p>
                 <p class="card-text">
-                	셀 수 없이 많은 리조트 액티비티와 관광 명소를 비롯해 언제나 볼거리와
-                	즐길거리로 가득 찬 루아우 호텔에서 특별한 경험을 체험해보세요. 
+                	루아우 호텔의 최신식 24시간 피트니스 센터에서 활기차게 운동하고 
+                	야외 수영장의 선데크에서 느긋하게 누워 있거나 수영장 바에서 신선한 칵테일을 경험해보세요. 
+                	또한 고객을 위한 대형 컨벤션 홀, 미팅 룸들도 자유롭게 이용해 보세요.  
                 </p>
                 <a href="facilities.jsp#stop" class="card-link">Another link</a>
             </div>
