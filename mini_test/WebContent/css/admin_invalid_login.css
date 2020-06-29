@@ -1,0 +1,16 @@
+* {
+	margin: 0 auto;
+}
+img {
+	border: 0;
+}
+#warning {
+	postion: relative;
+	display: block;
+}
+#title {
+	text-align: center;
+}
+#back {
+	align: center;
+}

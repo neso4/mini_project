@@ -18,18 +18,11 @@
                 <div class="social-icons">
                     <img src="img/logo_edited.jpg" alt="logo">
                 </div>
-                <form id="login" action="" class="input-group">
-                    <input type="text" class="input-field" placeholder="User name or Email" required>
-                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                <form id="login" action="admin_login_process.jsp" class="input-group" method="POST">
+                    <input type="text" class="input-field" placeholder="User name or Email" name="id" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" name="pwd" required>
                     <input type="checkbox" class="checkbox"><span>Remember Password</span>
                     <button class="submit">Login</button>
-                </form>
-                <form id="register" action="" class="input-group">
-                    <input type="text" class="input-field" placeholder="User name or Email" required>
-                    <input type="email" class="input-field" placeholder="Your Email" required>
-                    <input type="password" class="input-field" placeholder="Enter Password" required>
-                    <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
-                    <button class="submit">REGISTER</button>
                 </form>
             </div>
         </div>

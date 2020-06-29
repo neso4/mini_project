@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>예약 처리 프로세스(html 페이지로 출력되지 않음)</title>
-		<%@page import="java.sql.*, javax.sql.*, javax.naming.*,
+	<%@page import="java.sql.*, javax.sql.*, javax.naming.*,
 					java.util.*, java.io.*" %>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<% // 예약 페이지에서 파라미터 받아옴

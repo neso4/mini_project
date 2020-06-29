@@ -13,5 +13,13 @@
 </head>
 <body>
 	<jsp:include page="admin_header.jsp"/>
+	<div class="row">
+  		<jsp:include page="admin_sidebar.jsp"/>
+  		<div class="col-10">
+   		<!-- 페이지 내용 -->
+      	<!-- 뭘 출력해야할까... -->
+		ㅁㄴㅇㄴㅇㄴㅇㄴㅇ
+  		</div>
+	</div>
 </body>
 </html>

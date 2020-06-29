@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>예약 완료</title>
+	<title>관리자 페이지 템플릿</title>
 	<!--부트스트랩 import-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,18 +12,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<jsp:include page="header.jsp"/>
-	<div class="container">
-		<div>
-			<h1 class="display-3">예약이 완료 되었습니다.</h1>
-			<p>
-				감사합니다!
-			</p>
-		</div>		
-	</div>
-	<hr>
-	<div class="container">
-		<jsp:include page="footer.jsp"/>
+	<jsp:include page="admin_header.jsp"/>
+	<div class="row">
+  		<jsp:include page="admin_sidebar.jsp"/>
+  		<div class="col-10">
+   		<!-- 페이지 내용 -->
+      
+
+  		</div>
 	</div>
 </body>
 </html>
