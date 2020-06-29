@@ -67,7 +67,7 @@
                     극찬한 스위트입니다. 8-10층에 위치한 넓은 전용 베란다에 환상적인 태평양의 풍광이 하루종일 펼쳐지며,  <br>
                     투베드룸과 함께 여유로운 공간의 인테리어가 가족 또는 친구와의 여행에 넉넉한 만족을 선사합니다.
                 </p>
-                <a href="#" class="btn btn-primary" style="float: right;">예약</a>
+                <a href="penthouse-suite.jsp" class="btn btn-primary" style="float: right;">예약</a>
             </div>
         </div>
         

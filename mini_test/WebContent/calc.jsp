@@ -51,7 +51,6 @@
 		<jsp:param name="total" value="<%=total %>"/>
 		<jsp:param name="price" value="<%=price %>"/>
 		<jsp:param name="vat" value="<%=vat %>"/>
-		
 	</jsp:forward>
 	<jsp:forward page="reservation.jsp"/>
 </body>

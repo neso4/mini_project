@@ -18,7 +18,9 @@
   		<div class="col-10">
    		<!-- 페이지 내용 -->
       	<!-- 뭘 출력해야할까... -->
-		ㅁㄴㅇㄴㅇㄴㅇㄴㅇ
+			<div class="jumbotron" style="background-color: aliceblue;">
+				<h1 class="display-4">관리자 페이지에 오신 것을 환영합니다.</h1>
+			</div>
   		</div>
 	</div>
 </body>

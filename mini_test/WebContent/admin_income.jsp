@@ -4,16 +4,15 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>관리자 - 예약 현황</title>
+	<title>관리자 - 매출 현황</title>
 	<!--부트스트랩 import-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-	<%@page import="java.sql.*, javax.sql.*, javax.naming.*,
+    <%@page import="java.sql.*, javax.sql.*, javax.naming.*,
 					java.util.*, mini_project.Reservations" %>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-	
 </head>
 <body>
 	<jsp:useBean 	id="reservations" class="mini_project.Reservations" 
@@ -90,8 +89,8 @@
 							<td>${record.adults}</td>
 							<td>${record.kids}</td>
 							<td>${record.price}</td>
-							<td><a href="#" class="btn btn-success">변경하기</a></td>
-							<td><a href="#" class="btn btn-danger">취소하기</a></td>
+							<td></td>
+							<td></td>
 						</tr>
 					</c:forEach>
 				</table>
