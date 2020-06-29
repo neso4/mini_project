@@ -25,10 +25,11 @@
 				<label class="col-sm-2" for="type">문의 유형</label>
 				<div class="col-sm-3">
       				<select class="form-control" name="type">
-        				<option selected>예약하기</option>
-        					<option value="1">예약 문의</option>
+        				<option selected>문의하기</option>
+        					<option value="1">예약 및 취소 문의</option>
         					<option value="2">객실 문의</option>
-        					<option value="3">기타 문의</option>
+        					<option value="3">시설 문의</option>
+        					<option value="4">기타 문의</option>
      				</select>
      			</div>
 			</div>
