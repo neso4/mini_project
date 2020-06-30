@@ -20,15 +20,16 @@
 	
 	<div class="container">
 		<!-- 메일인지 게시판인지 아직 못 정함 -->
-		<form action="contact_program.jsp" class="form-horizontal" method="POST" name="contact">
+		<form action="contact_process.jsp" class="form-horizontal" method="POST" name="contact">
 			<div class="form-group row">
 				<label class="col-sm-2" for="type">문의 유형</label>
 				<div class="col-sm-3">
       				<select class="form-control" name="type">
-        				<option selected>예약하기</option>
-        					<option value="1">예약 문의</option>
+        				<option selected>문의하기</option>
+        					<option value="1">예약 및 취소 문의</option>
         					<option value="2">객실 문의</option>
-        					<option value="3">기타 문의</option>
+        					<option value="3">시설 문의</option>
+        					<option value="4">기타 문의</option>
      				</select>
      			</div>
 			</div>
@@ -41,19 +42,13 @@
 			<div class="form-group row">
 				<label class="col-sm-2">내용</label>
 				<div class="col-sm-6">
-					<textarea class="form-control" name="detail"></textarea>
+					<textarea class="form-control" name="content"></textarea>
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2">이름</label>
 				<div class="col-sm-3">
-					<input 	type="name" class="form-control" name="name">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label class="col-sm-2">예약 비밀번호 확인</label>
-				<div class="col-sm-3">
-					<input 	type="password" class="form-control" name="pwdcheck">
+					<input 	type="text" class="form-control" name="name">
 				</div>
 			</div>
 			<div class="form-group row">

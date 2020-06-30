@@ -32,7 +32,7 @@
 		InitialContext ic = new InitialContext();
 		DataSource ds = (DataSource)ic.lookup("java:comp/env/jdbc/myoracle");
 		Connection co = ds.getConnection();
-		// 1. 예약 테이블에 데이터 삽입
+		// 1. 예약 테이블에 데이터 삽입 
 		String sql = "INSERT INTO reservation VALUES (?, ?, TO_DATE(?, 'YYYY-MM-DD'), TO_DATE(?, 'YYYY-MM-DD'), ?, ?, ?, ?)";
 		PreparedStatement ps = co.prepareStatement(sql);
 		ps.setString(1, email);

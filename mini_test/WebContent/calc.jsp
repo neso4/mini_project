@@ -37,10 +37,9 @@
 	}
 
 	// 부가가치세 계산하기
-	vat =(double) price * 0.1; 
 	
 	// 총 가격
-	total =(int)vat + price;
+	total = price;
 	%>
 	<!-- 예약 페이지로 파라미터 가져가야함 -->
 	<jsp:forward page="reservation.jsp">

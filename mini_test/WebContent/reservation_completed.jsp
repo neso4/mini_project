@@ -14,11 +14,11 @@
 <body>
 	<jsp:include page="header.jsp"/>
 	<div class="container">
-		<div>
+		<div class="alert alert-success" style="text-align:center;">
 			<h1 class="display-3">예약이 완료 되었습니다.</h1>
-			<p>
-				감사합니다!
-			</p>
+			<h3>감사합니다.</h3>
+			<hr>
+			<a href="index.jsp" class="btn btn-success">홈으로 돌아가기</a>
 		</div>		
 	</div>
 	<hr>

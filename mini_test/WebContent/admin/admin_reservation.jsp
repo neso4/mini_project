@@ -23,13 +23,14 @@
 	DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/myoracle");
 	Connection co = ds.getConnection();
 	
-	String sql = "SELECT * FROM reservation";
+	String sql = "SELECT custname, guests.email, roomnumber, checkindate, checkoutdate, requirement, adults, kids, price " + 
+			"FROM guests, reservation WHERE guests.email = reservation.email ORDER BY checkindate DESC";
 	PreparedStatement ps = co.prepareStatement(sql);
 	ResultSet rs = ps.executeQuery();
 	ArrayList <Reservations> rl = new ArrayList<Reservations>();
 	while (rs.next()) {
-		rl.add(new Reservations(rs.getString(1), rs.getInt(2), rs.getString(3), rs.getString(4),
-				rs.getString(5), rs.getInt(6), rs.getInt(7), rs.getInt(8)));
+		rl.add(new Reservations(rs.getString(1) ,rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5),
+				rs.getString(6), rs.getInt(7), rs.getInt(8), rs.getInt(9)));
 	}
 	rs.close();
 	ps.close();
@@ -48,6 +49,9 @@
 				<table class="table table-hover" style="text-align:center;">
 					
 					<tr>
+						<th>
+							이름
+						</th>
 						<th>
 							이메일
 						</th>
@@ -82,6 +86,7 @@
 					<c:set var="list" value="<%=rl %>"/>
 						<c:forEach var="record" items="${list}">
 						<tr>
+							<td>${record.name}</td>
 							<td>${record.email}</td>
 							<td>${record.roomNumber}</td>
 							<td>${record.checkin}</td>

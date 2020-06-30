@@ -102,18 +102,6 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">예약 비밀 번호</label>
-				<div class="col-sm-3">
-					<input 	type="password" class="form-control" name="pwd">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label class="col-sm-2">예약 비밀번호 확인</label>
-				<div class="col-sm-3">
-					<input 	type="password" class="form-control" name="pwdcheck">
-				</div>
-			</div>
-			<div class="form-group row">
 				<label class="col-sm-2">전화 번호</label>
 				<div class="col-sm-3">
 					<input 	type="text" class="form-control" name="phone">

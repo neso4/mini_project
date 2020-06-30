@@ -4,23 +4,26 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>로그인 실패</title>
+	<title>문의 사항 접수 완료</title>
 	<!--부트스트랩 import-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <style>
-    	@import url('css/admin_invalid_login.css')
-    </style>
 </head>
 <body>
-	<div class="jumbotron" style="background-color:#f8d7da;">
-		<div class="container" style="text-align:center;" >
-			<h1 class="display-1" style="color: #a91c61;'">로그인 실패</h1>
-			<img src="../img/warning.png">
-			<a href="admin_login.jsp" class="btn btn-danger btn-lg btn-block">로그인 페이지로</a>
-		</div>
+	<jsp:include page="header.jsp"/>
+	<div class="container">
+		<div class="alert alert-info" style="text-align:center;">
+			<h1 class="display-3"><i>문의 사항이 접수 되었습니다.</i></h1>
+			<h3>감사합니다.</h3>
+			<hr>
+			<a href="index.jsp" class="btn btn-info">홈으로 돌아가기</a>
+		</div>		
+	</div>
+	<hr>
+	<div class="container">
+		<jsp:include page="footer.jsp"/>
 	</div>
 </body>
 </html>

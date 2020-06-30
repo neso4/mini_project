@@ -1,6 +1,7 @@
 package mini_project;
 
 public class Reservations {
+	private String name;
 	private String email;
 	private int roomNumber;
 	private String checkin;
@@ -13,8 +14,10 @@ public class Reservations {
 	public Reservations() {
 	}
 
-	public Reservations(String email, int roomNumber, String checkin, String checkout, String requirement, int adults,
-			int kids, int price) {
+	public Reservations(String name, String email, int roomNumber, String checkin, String checkout, String requirement,
+			int adults, int kids, int price) {
+		super();
+		this.name = name;
 		this.email = email;
 		this.roomNumber = roomNumber;
 		this.checkin = checkin;
@@ -23,6 +26,15 @@ public class Reservations {
 		this.adults = adults;
 		this.kids = kids;
 		this.price = price;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getEmail() {
