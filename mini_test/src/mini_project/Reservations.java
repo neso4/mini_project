@@ -14,6 +14,7 @@ public class Reservations {
 	public Reservations() {
 	}
 
+		
 	public Reservations(String name, String email, int roomNumber, String checkin, String checkout, String requirement,
 			int adults, int kids, int price) {
 		super();
@@ -27,7 +28,6 @@ public class Reservations {
 		this.kids = kids;
 		this.price = price;
 	}
-
 
 	public String getName() {
 		return name;

@@ -8,6 +8,11 @@ public class Rooms {
 	
 	public Rooms () {
 	}
+	
+	public Rooms(int roomNumber) {
+		super();
+		this.roomNumber = roomNumber;
+	}
 
 	public Rooms(int roomNumber, int roomType, int price) {
 		this.roomNumber = roomNumber;

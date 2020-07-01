@@ -23,13 +23,14 @@
 	DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/myoracle");
 	Connection co = ds.getConnection();
 	
-	String sql = "SELECT * FROM reservation";
+	String sql = "SELECT custname, guests.email, roomnumber, TO_CHAR(checkindate, 'YYYY-MM-DD'), TO_CHAR(checkoutdate, 'YYYY-MM-DD'), requirement, adults, kids, price " + 
+			"FROM guests, reservation WHERE guests.email = reservation.email ORDER BY checkindate DESC";
 	PreparedStatement ps = co.prepareStatement(sql);
 	ResultSet rs = ps.executeQuery();
 	ArrayList <Reservations> rl = new ArrayList<Reservations>();
 	while (rs.next()) {
-		rl.add(new Reservations(rs.getString(1), rs.getInt(2), rs.getString(3), rs.getString(4),
-				rs.getString(5), rs.getInt(6), rs.getInt(7), rs.getInt(8)));
+		rl.add(new Reservations(rs.getString(1) ,rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5),
+				rs.getString(6), rs.getInt(7), rs.getInt(8), rs.getInt(9)));
 	}
 	rs.close();
 	ps.close();
@@ -38,7 +39,7 @@
 	<jsp:include page="admin_header.jsp"/>
 	<div class="row">
   		<jsp:include page="admin_sidebar.jsp"/>
-  		<div class="col-10">
+  		<div class="col-11">
    		<!-- 페이지 내용 -->
       	<!-- 뭘 출력해야할까... -->
 			<div class="jumbotron" style="background-color:aliceblue;">
@@ -48,6 +49,9 @@
 				<table class="table table-hover" style="text-align:center;">
 					
 					<tr>
+						<th>
+							이름
+						</th>
 						<th>
 							이메일
 						</th>
@@ -82,16 +86,17 @@
 					<c:set var="list" value="<%=rl %>"/>
 						<c:forEach var="record" items="${list}">
 						<tr>
+							<td>${record.name}</td>
 							<td>${record.email}</td>
 							<td>${record.roomNumber}</td>
 							<td>${record.checkin}</td>
 							<td>${record.checkout}</td>
-							<td>${record.requirement}</td>
+							<td style="overflow:auto;">${record.requirement}</td>
 							<td>${record.adults}</td>
 							<td>${record.kids}</td>
 							<td>${record.price}</td>
-							<td><a href="#" class="btn btn-success">변경하기</a></td>
-							<td><a href="#" class="btn btn-danger">취소하기</a></td>
+							<td><a href="admin_change_room.jsp?n=${record.checkin}&e=${record.email}&price=${record.price}" class="btn btn-outline-success">변경하기</a></td>
+							<td><a href="#" class="btn btn-outline-danger">취소하기</a></td>
 						</tr>
 					</c:forEach>
 				</table>

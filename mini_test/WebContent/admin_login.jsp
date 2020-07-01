@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<title>관리자 로그인</title>
 	<style>
-	@import url('css/admin_login.css')
+	@import url('../css/admin_login.css')
 	</style>
 </head>
 <body>
@@ -16,7 +16,7 @@
                     <button type="button" class="togglebtn">LOG IN</button>
                 </div>
                 <div class="social-icons">
-                    <img src="img/logo_edited.jpg" alt="logo">
+                    <img src="../img/logo_edited.jpg" alt="logo">
                 </div>
                 <form id="login" action="admin_login_process.jsp" class="input-group" method="POST">
                     <input type="text" class="input-field" placeholder="User name or Email" name="id" required>
