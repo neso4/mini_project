@@ -13,7 +13,16 @@
 	<%@page import="java.sql.*, javax.sql.*, javax.naming.*,
 					java.util.*, mini_project.Reservations" %>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<script>
+	function confirm_cancel () {
+		var isSure = confirm('해당 예약을 취소하시겠습니까?');
+		if(isSure == true) {
+			location = 'admin_cancel_process.jsp';
+		}
+		
+	}
 	
+	</script>
 </head>
 <body>
 	<jsp:useBean 	id="reservations" class="mini_project.Reservations" 
@@ -95,8 +104,8 @@
 							<td>${record.adults}</td>
 							<td>${record.kids}</td>
 							<td>${record.price}</td>
-							<td><a href="admin_change_room.jsp?n=${record.checkin}&e=${record.email}&price=${record.price}" class="btn btn-outline-success">변경하기</a></td>
-							<td><a href="#" class="btn btn-outline-danger">취소하기</a></td>
+							<td><a href="admin_change_room.jsp?d=${record.checkin}&e=${record.email}&price=${record.price}" class="btn btn-outline-success">변경하기</a></td>
+							<td><a href="admin_cancel_process.jsp?d=${record.checkin}&e=${record.email}&price=${record.price}" class="btn btn-outline-danger">취소하기</a></td>
 						</tr>
 					</c:forEach>
 				</table>

@@ -15,7 +15,7 @@
 	<jsp:include page="admin_header.jsp"/>
 	<div class="row">
   		<jsp:include page="admin_sidebar.jsp"/>
-  		<div class="col-10">
+  		<div class="col-11">
    		<!-- 페이지 내용 -->
       		<div class="jumbotron" style="background-color:aliceblue;">
       			<h1 class="display-4">제목</h1>

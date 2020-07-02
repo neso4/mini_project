@@ -29,6 +29,22 @@ public class Reservations {
 		this.price = price;
 	}
 
+	
+	
+	public Reservations(String email, int roomNumber, String checkin, String checkout, String requirement, int adults,
+			int kids, int price) {
+		super();
+		this.email = email;
+		this.roomNumber = roomNumber;
+		this.checkin = checkin;
+		this.checkout = checkout;
+		this.requirement = requirement;
+		this.adults = adults;
+		this.kids = kids;
+		this.price = price;
+	}
+
+
 	public String getName() {
 		return name;
 	}

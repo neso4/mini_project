@@ -37,11 +37,15 @@
 		InitialContext ic = new InitialContext();
 		DataSource ds = (DataSource)ic.lookup("java:comp/env/jdbc/myoracle");
 		Connection co = ds.getConnection();
-		// 1. 예약 테이블에 데이터 삽입
-		String sql = "SELECT * FROM contact where ?";
+		String sql = "INSERT INTO contact VALUES (?, ?, ?, ?, ?, SYSDATE)";
 		PreparedStatement ps = co.prepareStatement(sql);
 		ps.setInt(1, type);
-		response.sendRedirect("contact_process.jsp");
+		ps.setString(2, title);
+		ps.setString(3, content);
+		ps.setString(4, name);
+		ps.setString(5, phone);
+		ps.executeUpdate();
+		response.sendRedirect("contact_accepted.jsp");
 	%>
 
 	<%

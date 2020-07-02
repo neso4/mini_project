@@ -56,7 +56,7 @@
 			<div class="col-3">
 				<form action="update_room.jsp" method="GET">
 					<div class="form-group">
-    					<label for="exampleFormControlSelect2">방을 선택해주세요</label>
+    					<label for="exampleFormControlSelect2">변경할 방 번호를 선택해주세요.</label>
     					<select multiple class="form-control" id="exampleFormControlSelect2">
       						<c:set var="list" value="<%=rl %>"/>
 						<c:forEach var="record" items="${list}">

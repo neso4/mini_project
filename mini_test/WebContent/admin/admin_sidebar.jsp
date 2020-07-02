@@ -7,7 +7,7 @@
 	<title>관리자 페이지 사이드바(제목 출력X)</title>
 </head>
 <body>
-	<div class="col-2">
+	<div class="col-1">
     	<div class="nav flex-column"  aria-orientation="vertical">
       		<div class="btn btn-" href="admin_reservation.jsp">예약 현황</div>
       		<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">숙박객 정보</a>
