@@ -47,7 +47,7 @@
 						트립어드바이저(TripAdvisor Travellers’ Choice), 트래블 앤 레저(Travel +
 						Leisure)에서도 최고의 영예를 차지했습니다.
 					</dd>
-					<a><img src="http://placehold.it/980x460" vspace="70px" /></a><br>
+					<a><img src="img/about1.jpg" vspace="70px" width="980" height="460" /></a><br>
 					
 					<h4>루아우의 가장 큰 자산은 사람입니다.</h4>
 					<hr align="center" style="color: rgb(56, 53, 53); width: 38%;">
@@ -75,14 +75,14 @@
 						<i>We are lu`au</i>
 					</h3>
 					<br> <br> <br> 
-					<a><img	src="http://placehold.it/980x460" vspace="45px" /></a>
+					<a><img	src="img/about2.jpg" vspace="45px" width="980" height="460"/></a>
 					<br><br> <br> 
 					<p>
 						루아우 호텔은 확 트인 동해 바다를 한눈에 바라 볼 수 있는 환상적인 전망을 자랑하며
 						<br> 모든 객실에서 전면의 환상적인오션뷰와 후면으로는 녹음이 드리워진 마운틴 뷰를 동시에 확인 할 수 있습니다.
 						<br> 루아우 호텔만의 여유로운 객실에서 편안한 휴식의 시간을 누려보시기 바랍니다. 
 						<br> <br> <br>
-						<a><img	src="http://placehold.it/980x460" vspace="45px" /></a><br> 
+						<a><img	src="img/about3.jpg" vspace="45px" width="980" height="460" /></a><br> 
 							루아우 호텔에 방문하신 여러분은 동서양의 다양한 퀴진을 선보이는 '피에스타',
 						<br> 환상적인 도심의 스카이라인을 감상하며 애프터눈 티 세트나 와인을 즐길 수 있는 ‘로비 라운지.바’에서 새로운 다이닝을 경험해 보실 수 있습니다.
 						<br> 현대인을 위한 맞춤형 트리트먼트를 선보이는 ‘루아우스파’와 최신식 시설의 ‘루아우 피트니스’에서는 건강한 휴식을 제안합니다. 
