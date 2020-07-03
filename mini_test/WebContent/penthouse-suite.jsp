@@ -24,16 +24,22 @@
 					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   						<div class="carousel-inner">
     						<div class="carousel-item active">
-      							<img src="img/placeholder.jpg" class="d-block w-100" alt="...">
+      							<img src="img/pnthouseSuite1.jpg" class="d-block w-100" alt="...">
     						</div>
     						<div class="carousel-item">
-      							<img src="img/placeholder.jpg" class="d-block w-100" alt="...">
+      							<img src="img/pnthouseSuite2.jpg" class="d-block w-100" alt="...">
     						</div>
     						<div class="carousel-item">
-      							<img src="img/placeholder.jpg" class="d-block w-100" alt="...">
+      							<img src="img/pnthouseSuite3.jpg" class="d-block w-100" alt="...">
     						</div>
     						<div class="carousel-item">
-      							<img src="img/placeholder.jpg" class="d-block w-100" alt="...">
+      							<img src="img/pnthouseSuite4.jpg" class="d-block w-100" alt="...">
+    						</div>
+    						<div class="carousel-item">
+      							<img src="img/pnthouseSuite5.jpg" class="d-block w-100" alt="...">
+    						</div>
+    						<div class="carousel-item">
+      							<img src="img/pnthouseSuite6.jpg" class="d-block w-100" alt="...">
     						</div>
   						</div>
   						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
