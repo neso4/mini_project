@@ -48,7 +48,7 @@
         </div>
         <div class="card" width="100%" style="margin-bottom: 10px;">
             <div class="card-body">
-                <img src="img/room2.jpg" width="30%" style="float: left; padding-right: 10px;">
+                <img src="img/room3.jpg" width="30%" style="float: left; padding-right: 10px;">
                 <h5 class="card-title">프레지덴셜 스위트</h5>
                 <p class="card-text">
                     5-7층에 자리한 투베드룸 스위트로, 세련된 분위기의 여유로운 공간을 선사합니다.<br>
@@ -60,7 +60,7 @@
         </div>
         <div class="card" width="100%" style="margin-bottom: 10px;" style="float: right;">
             <div class="card-body">
-                <img src="img/room3.jpg" width="30%" style="float: left; padding-right: 10px;">
+                <img src="img/room2.jpg" width="30%" style="float: left; padding-right: 10px;">
                 <h5 class="card-title">펜트하우스 스위트</h5>
                 <p class="card-text">
                     포브스 지가 “하와이 모든 섬의 호텔 스위트룸 가운데 가장 드라마틱한 감동을 선사”한다고 <br>
