@@ -13,23 +13,23 @@
     <%@page import="java.sql.*, javax.sql.*, javax.naming.*,
 					java.util.*, mini_project.Rooms" %>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-	<jsp:useBean 	id="reservations" class="mini_project.Reservations" 
-					scope="request"/>
+	<jsp:useBean 	id="r" class="mini_project.Reservations" scope="application"/>
 	<%
-	String email = request.getParameter("email");
-	String checkin = request.getParameter("checkin");
+	String email = request.getParameter("e");
+	String checkin = request.getParameter("d");
 	int price = Integer.parseInt(request.getParameter("price"));
-	
 	InitialContext ic = new InitialContext();
 	DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/myoracle");
 	Connection co = ds.getConnection();
-	
-	String sql = "SELECT roomnumber " + 
-			"FROM rooms " + 
+	r.setEmail(email);
+	r.setCheckin(checkin);
+	r.setPrice(price);
+	String sql = "SELECT roomnumber " +
+			"FROM rooms " +
 			"WHERE roomnumber NOT IN (SELECT  roomnumber " +
-			                        "FROM reservation " + 
-			                        "WHERE checkindate = TO_DATE(?,'YYYY-MM-DD')) " +
-			"AND PRICE = ? " + 
+			                        "FROM reservation " +
+			                        "WHERE TO_char(checkindate,'YYYY-MM-DD') LIKE ?) " +
+			"AND PRICE = ? " +
 			"ORDER BY roomnumber ASC";
 	PreparedStatement ps = co.prepareStatement(sql);
 	ps.setString(1, checkin);
@@ -45,6 +45,8 @@
 	%>
 </head>
 <body>
+	
+	
 	<jsp:include page="admin_header.jsp"/>
 	<div class="row">
   		<jsp:include page="admin_sidebar.jsp"/>
@@ -54,10 +56,10 @@
       			<h1 class="display-4">방 변경하기</h1>
       		</div>
 			<div class="col-3">
-				<form action="update_room.jsp" method="GET">
+				<form action="update_room_process.jsp" method="GET">
 					<div class="form-group">
     					<label for="exampleFormControlSelect2">변경할 방 번호를 선택해주세요.</label>
-    					<select multiple class="form-control" id="exampleFormControlSelect2">
+    					<select multiple class="form-control" id="exampleFormControlSelect2" name="rn">
       						<c:set var="list" value="<%=rl %>"/>
 						<c:forEach var="record" items="${list}">
 							<option>${record.roomNumber}</option>

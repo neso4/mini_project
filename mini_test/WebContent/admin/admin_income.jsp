@@ -28,10 +28,10 @@
 	DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/myoracle");
 	Connection co = ds.getConnection();
 	
-	String sql = "SELECT TO_CHAR(checkindate,'YYYY-MM'), SUM(price) " +
-			"FROM reservation " +
+	String sql = "SELECT TO_CHAR(checkindate,'YYYY-MM-DD'), SUM(price) " +
+			"FROM reservation "+ 
 			"WHERE TO_CHAR(checkindate, 'YYYY-MM') = ? " +
-			"GROUP BY TO_CHAR(checkindate,'YYYY-MM')";
+			"GROUP BY TO_CHAR(checkindate,'YYYY-MM-DD')";
 	PreparedStatement ps = co.prepareStatement(sql);
 	ps.setString(1, thisMonth);
 	ResultSet rs = ps.executeQuery();
@@ -103,13 +103,16 @@
 					
 					<tr>
 						<th>
-							연-월
+							날짜
 						</th>
 						<th>
 							매출
 						</th>
 						<th>
-							ㅁㅁ 대비 매출 비율
+							백분율
+						</th>
+						<th>
+							최대 매출액 대비 매출 비율 그래프
 						</th>
 					</tr>
 					<c:set var="list" value="<%=il %>"/>
@@ -118,7 +121,12 @@
 							<td>${record.date}</td>
 							<td>${record.sum}</td>
 							<td>
-								<progress id="file" max="1035000000" value="${record.sum}" style="width:100%;"> 70% </progress>
+							<%
+							int per = () 
+							%>
+							</td>
+							<td>
+								<progress id="file" max="34500000" value="${record.sum}" style="width:100%;"> 70% </progress>
 							</td>
 						</tr>
 					</c:forEach>

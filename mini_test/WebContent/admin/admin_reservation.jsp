@@ -17,7 +17,7 @@
 	function confirm_cancel () {
 		var isSure = confirm('해당 예약을 취소하시겠습니까?');
 		if(isSure == true) {
-			location = 'admin_cancel_process.jsp';
+			
 		}
 		
 	}
@@ -56,7 +56,6 @@
 			</div>
 			<div>
 				<table class="table table-hover" style="text-align:center;">
-					
 					<tr>
 						<th>
 							이름
