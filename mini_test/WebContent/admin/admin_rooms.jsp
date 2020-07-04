@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <%@page import="java.sql.*, javax.sql.*, javax.naming.*,
-					java.util.*, java.io.*, java.text.* ,mini_project.Rooms" %>
+					java.util.*, java.io.*, java.text.* , mini_project.Rooms" %>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	<%
 	ArrayList <Rooms> rl1 = new ArrayList <Rooms> ();

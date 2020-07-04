@@ -11,10 +11,11 @@
 </head>
 <body>
 	<%
-	String checkin = request.getParameter("d");
+	String checkinDate = request.getParameter("d");
 	String email = request.getParameter("e");
 	int price = Integer.parseInt(request.getParameter("price"));
 	ArrayList <Reservations> rl = new ArrayList<Reservations>();
+	// 넘겨받은 파라미터와 같은 정보를 가지고 있는 레코드를 찾아서 객체에 저장함
 	String sql = "SELECT email, roomnumber, TO_CHAR(checkindate, 'YYYY-MM-DD'), TO_CHAR(checkoutdate, 'YYYY-MM-DD'), requirement, adults, kids, price "+
 			"FROM reservation "+
 			"WHERE TO_CHAR(checkindate, 'YYYY-MM-DD')=? " +
@@ -23,7 +24,7 @@
 	DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/myoracle");
 	Connection co = ds.getConnection();
 	PreparedStatement ps = co.prepareStatement(sql);
-	ps.setString(1, checkin);
+	ps.setString(1, checkinDate);
 	ps.setString(2, email);
 	ps.setInt(3, price);
 	ResultSet rs = ps.executeQuery();
@@ -31,7 +32,7 @@
 		rl.add(new Reservations(rs.getString(1), rs.getInt(2), rs.getString(3),
 					rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7), rs.getInt(8)));
 	}
-		
+	// 취소할 데이터를 취소된 예약 현황 테이블에 삽입함
 	sql = "INSERT INTO cancelled_reservation VALUES (?, ?, TO_DATE(?, 'YYYY-MM-DD'), TO_DATE(?, 'YYYY-MM-DD'), ?, ?, ?, ?, SYSDATE)";
 	ps = co.prepareStatement(sql);
 	for(int i = 0; i < rl.size(); i++ ){
@@ -45,16 +46,23 @@
 		ps.setInt(8, rl.get(i).getPrice());
 		ps.executeUpdate();
 	}
-	sql = "DELETE FROM reservation WHERE checkindate = TO_DATE(?, 'YYYY-MM-DD') AND email LIKE ? AND price = ?";
-	ps = co.prepareStatement(sql);
-	ps.setString(1, checkin);
-	ps.setString(2, email);
-	ps.setInt(3, price);
-	ps.executeQuery();
-	sql = "DELETE FROM guests WHERE email LIKE ? AND TO_CHAR(usedate, 'YYYY-MM-DD') LIKE ?";
+	// 취소할 정보를 예약 현황에서 삭제함
+	sql = 	"DELETE FROM reservation " +
+			"WHERE email LIKE ? " +
+			"AND TO_CHAR(checkindate, 'YYYY-MM-DD') LIKE ? " +
+			"AND PRICE = ?";
 	ps = co.prepareStatement(sql);
 	ps.setString(1, email);
-	ps.setString(2, checkin);
+	ps.setString(2, checkinDate);
+	ps.setInt(3, price);
+	ps.executeQuery();
+	// 숙박객 명단에서도 삭제함
+	sql =  	"DELETE FROM guests " +
+			"WHERE email LIKE ? " +
+			"AND TO_CHAR(usedate, 'YYYY-MM-DD') LIKE ?";
+	ps = co.prepareStatement(sql);
+	ps.setString(1, email);
+	ps.setString(2, checkinDate);
 	ps.executeQuery();
 	rs.close();
 	co.close();

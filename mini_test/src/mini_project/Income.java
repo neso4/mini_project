@@ -11,7 +11,7 @@ public class Income {
 		this.date = date;
 		this.sum = sum;
 	}
-
+	
 	public String getDate() {
 		return date;
 	}

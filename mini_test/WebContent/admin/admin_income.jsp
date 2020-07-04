@@ -19,6 +19,10 @@
 	java.util.Date d = new java.util.Date();
 	String thisMonth = sdf.format(d);
 	String today = sdf2.format(d);
+	int sum = 0;
+	int index = 0;
+	double per = 0;
+	String str = null;
 	%>
 </head>
 <body>
@@ -36,12 +40,15 @@
 	ps.setString(1, thisMonth);
 	ResultSet rs = ps.executeQuery();
 	ArrayList <Income>il = new ArrayList<Income>();
+	ArrayList <Integer> sl = new ArrayList <Integer>();
 	while (rs.next()) {
 		il.add(new Income(rs.getString(1), rs.getInt(2)));
 	}
 	rs.close();
 	ps.close();
 	co.close();
+	for(int i = 0; i < il.size(); i++)
+		sum += il.get(i).getSum();
 	%>
 	<jsp:include page="admin_header.jsp"/>
 	<div class="row">
@@ -49,14 +56,10 @@
   		<div class="col-11">
    		<!-- 페이지 내용 -->
       	<!-- 뭘 출력해야할까... -->
-			<div class="jumbotron" style="background-color:aliceblue;">
+			<div class="jumbotron" style="background-color:aliceblue; ">
 				<h1 class="display-4">이번 달 매출 현황</h1>
 			</div>
 			<div class="form" style="text-align:center;">
-				<form action="search_income.jsp" method="GET" style="display:inline-block; padding-right:100px;">
-					<input type="date" name="date">
-					<input type="submit" value="날짜로 검색하기" class="btn btn-primary">
-				</form>
 				<form action="search_income.jsp" method="GET" style="display:inline-block; padding-right:100px;">
 					<select name="year">
 						<option>2013</option>
@@ -70,7 +73,7 @@
 					</select>
 					<input type="submit" value="연도로 검색하기" class="btn btn-info" >
 				</form>
-				<form action="search_income.jsp" method="GET" style="display:inline-block; ">
+				<form action="search_income.jsp" method="GET" style="display:inline-block; padding-right:100px;">
 					<select name="year">
 						<option>2013</option>
 						<option>2014</option>
@@ -97,6 +100,10 @@
 					</select>
 					<input type="submit" value="연-월 검색하기" class="btn btn-secondary" >
 				</form>
+				<form action="search_income.jsp" method="GET" style="display:inline-block; ">
+					<input type="date" name="date">
+					<input type="submit" value="날짜로 검색하기" class="btn btn-primary">
+				</form>
 			</div>
 			<div>
 				<table class="table table-hover" style="text-align:center;">
@@ -122,14 +129,37 @@
 							<td>${record.sum}</td>
 							<td>
 							<%
-							int per = () 
+							per = (double) il.get(index).getSum() / 34500000 * 100;
+							str = String.format("%.2f%%", per);
+							index++;
+							out.println(str);
 							%>
 							</td>
 							<td>
-								<progress id="file" max="34500000" value="${record.sum}" style="width:100%;"> 70% </progress>
+								<progress id="file" max="34500000" value="${record.sum}" style="width:100%;"></progress>
 							</td>
 						</tr>
 					</c:forEach>
+						<tr style="background-color:silver;">
+							<td>
+								<b>누적 매출</b>
+							</td>
+							<td>
+								<b><%=sum %>원</b>
+							</td>
+							<td>
+								<b>
+									<%
+									per = (double) sum / 1035000000 * 100;
+									str = String.format("%.2f%%", per);
+									out.println(str);
+									%>
+								</b>
+							</td>
+							<td>
+								<progress id="file" max="1035000000" value="<%=sum %>" style="width:100%;"></progress>
+							</td>
+						</tr>
 				</table>
 			</div>
   		</div>
