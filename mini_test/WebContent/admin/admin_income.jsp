@@ -140,7 +140,7 @@
 							</td>
 						</tr>
 					</c:forEach>
-						<tr style="background-color:silver;">
+						<tr style="background-color:lightgray;">
 							<td>
 								<b>누적 매출</b>
 							</td>
