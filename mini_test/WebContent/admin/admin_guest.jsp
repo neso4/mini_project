@@ -51,7 +51,7 @@
 				<h1 class="display-4">회원 정보 검색</h1>
 			</div>
 			<form action="admin_guest_process.jsp" class="form-horizontal" method="POST" name="contactUs">
-			<div class="textbox">
+			<div class="textbox" style="text-align:center;">
 				<b>회원명</b> : <input type ="text"  name="custname" size="25" maxlength="10"/>
 				<input type="submit" class="btn btn-primary"
 							value="찾기">

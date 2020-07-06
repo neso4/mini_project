@@ -9,10 +9,11 @@
 <body>
 	<div class="col-1">
     	<div class="nav flex-column"  aria-orientation="vertical">
-      		<div class="btn btn-" href="admin_reservation.jsp">예약 현황</div>
-      		<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">숙박객 정보</a>
-    		<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">접수된 문의</a>
-  			<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">매출 현황</a>
+      		<a href="admin_reservation.jsp" class="nav-link">예약 현황</a>
+      		<a href="admin_cancelled_reservation.jsp" class="nav-link">취소된 예약</a>
+      		<a href="admin_guest.jsp" class="nav-link">숙박객 정보</a>
+    		<a href="admin_contactUs.jsp" class="nav-link">접수된 문의</a>
+  			<a href="admin_income.jsp" class="nav-link">매출 현황</a>
     	</div>
   	</div>
 </body>

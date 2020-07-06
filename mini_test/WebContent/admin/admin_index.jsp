@@ -15,12 +15,14 @@
 	<jsp:include page="admin_header.jsp"/>
 	<div class="row">
   		<jsp:include page="admin_sidebar.jsp"/>
-  		<div class="col-10">
+  		<div class="col-11">
    		<!-- 페이지 내용 -->
       	<!-- 뭘 출력해야할까... -->
 			<div class="jumbotron" style="background-color: aliceblue;">
 				<h1 class="display-4">관리자 페이지에 오신 것을 환영합니다.</h1>
+				<h4 class="text-muted">현재 빈 객실 현황</h4>
 			</div>
+			<jsp:include page="admin_rooms.jsp"/>
   		</div>
 	</div>
 </body>

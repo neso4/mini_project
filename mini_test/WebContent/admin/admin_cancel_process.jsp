@@ -44,8 +44,8 @@
 		ps.setInt(6, rl.get(i).getAdults());
 		ps.setInt(7, rl.get(i).getKids());
 		ps.setInt(8, rl.get(i).getPrice());
-		ps.executeUpdate();
 	}
+	ps.executeUpdate();
 	// 취소할 정보를 예약 현황에서 삭제함
 	sql = 	"DELETE FROM reservation " +
 			"WHERE email LIKE ? " +

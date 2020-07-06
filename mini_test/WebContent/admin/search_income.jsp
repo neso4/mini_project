@@ -29,7 +29,6 @@
     ArrayList <Income> il = new ArrayList<Income>();
     ResultSet rs = null;
     PreparedStatement ps = null;
-    
     %>
 </head>
 <body>
@@ -38,7 +37,8 @@
   		<jsp:include page="admin_sidebar.jsp"/>
   		<div class="col-11">
    		<!-- 페이지 내용 -->
-   		<%if ((year == null)&&(month == null)) { 
+   		<%
+   		if ((year == null)&&(month == null)) { 
    			int sum = 0;
    		    int index = 0;
    		    double per = 0;
@@ -61,6 +61,10 @@
       		<div class="jumbotron" style="background-color:aliceblue;">
       			<h1 class="display-4"><%=date %>의 매출 현황</h1>
       		</div>
+      		<nav class="nav-bar" style="text-align:center;">
+      			<a href="admin_income.jsp" class="btn btn-lg btn-secondary">뒤로</a>
+      		</nav>
+      		<br>
       		<div>
 				<table class="table table-hover" style="text-align:center;">
 					
@@ -118,8 +122,9 @@
    			rs.close();
    			co.close();
    			ps.close();
-   			for(int i = 0; i < il.size(); i++)
+   			for(int i = 0; i < il.size(); i++){
 				sum += il.get(i).getSum();
+   			}
 		%>
 		<div class="jumbotron" style="background-color:aliceblue;">
       			<h1 class="display-4"><%=year %>년의 매출 현황</h1>
@@ -148,7 +153,6 @@
 							<td>${record.sum}</td>
 							<td>
 							<%
-							
 							per = (double) il.get(index).getSum() / MONTH_MAX * 100;
 							str = String.format("%.2f%%", per);
 							out.println(str);
@@ -185,7 +189,7 @@
 			int sum = 0;
    		    int index = 0;
    		    double per = 0;
-   		    String yearMonth = year +"-" + month ;
+   		    String yearMonth = year + "-" + month ;
 			sql = 	"SELECT TO_CHAR(checkindate, 'YYYY-MM-DD'), SUM(price) " +
 					"FROM reservation " +
 					"WHERE TO_CHAR(checkindate, 'YYYY-MM') LIKE ? "+
@@ -235,6 +239,7 @@
 							per = (double) il.get(index).getSum() / DAY_MAX * 100;
 							str = String.format("%.2f%%", per);
 							out.println(str);
+							index++;
 							%>
 							</td>
 							<td>
@@ -262,7 +267,7 @@
 				</table>
 			</div>
   		</div>
-  		<%} %>
+  		<%}%>
 	</div>
 </body>
 </html>

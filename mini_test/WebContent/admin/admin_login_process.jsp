@@ -20,6 +20,7 @@
 	ResultSet rs = ps.executeQuery();
 	if(!rs.next()){
 		response.sendRedirect("admin_invalid_login.jsp");
+		session.setAttribute("userID",id);
 	}
 	else {
 		response.sendRedirect("admin_index.jsp");

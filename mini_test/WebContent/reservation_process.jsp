@@ -46,11 +46,12 @@
 		ps.executeUpdate();
 		// 2. 숙박객 목록에 삽입. 기본키는 이메일 같음
 		// 시간 여유 되면 누적 횟수도 만들고 싶음
-		sql = "INSERT INTO guests  VALUES (?, ?, ?, SYSDATE)";
+		sql = "INSERT INTO guests  VALUES (?, ?, ?, ?)";
 		ps = co.prepareStatement(sql);
 		ps.setString(1, custName);
 		ps.setString(2, email);
 		ps.setString(3, phone);
+		ps.setString(4, checkin);
 		ps.executeUpdate();
 		
 		response.sendRedirect("reservation_completed.jsp");

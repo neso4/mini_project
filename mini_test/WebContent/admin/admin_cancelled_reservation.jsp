@@ -4,22 +4,15 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>관리자 - 예약 현황</title>
+	<title>관리자 - 취소된 예약 현황</title>
 	<!--부트스트랩 import-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<%@page import="java.sql.*, javax.sql.*, javax.naming.*,
-					java.util.*, mini_project.Reservations" %>
+					java.util.*, mini_project.Cancelled_reservations" %>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-	<script>
-	function confirm_cancel () {
-		var isSure = confirm('해당 예약을 취소하시겠습니까?');
-		if(isSure == true) {
-		}
-	}
-	</script>
 </head>
 <body>
 	<jsp:useBean 	id="reservations" class="mini_project.Reservations" 
@@ -29,14 +22,13 @@
 	DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/myoracle");
 	Connection co = ds.getConnection();
 	
-	String sql = "SELECT custname, guests.email, roomnumber, TO_CHAR(checkindate, 'YYYY-MM-DD'), TO_CHAR(checkoutdate, 'YYYY-MM-DD'), requirement, adults, kids, price " + 
-			"FROM guests, reservation WHERE guests.email = reservation.email ORDER BY checkindate DESC";
+	String sql = "SELECT * FROM cancelled_reservation";
 	PreparedStatement ps = co.prepareStatement(sql);
 	ResultSet rs = ps.executeQuery();
-	ArrayList <Reservations> rl = new ArrayList<Reservations>();
+	ArrayList <Cancelled_reservations> rl = new ArrayList<Cancelled_reservations>();
 	while (rs.next()) {
-		rl.add(new Reservations(rs.getString(1) ,rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5),
-				rs.getString(6), rs.getInt(7), rs.getInt(8), rs.getInt(9)));
+		rl.add(new Cancelled_reservations(rs.getString(1), rs.getInt(2), rs.getString(3),rs.getString(4),
+				rs.getString(5), rs.getInt(6), rs.getInt(7), rs.getInt(8), rs.getString(9)));
 	}
 	rs.close();
 	ps.close();
@@ -54,9 +46,6 @@
 			<div>
 				<table class="table table-hover" style="text-align:center;">
 					<tr>
-						<th>
-							이름
-						</th>
 						<th>
 							이메일
 						</th>
@@ -82,16 +71,12 @@
 							가격
 						</th>
 						<th>
-							방 변경
-						</th>
-						<th>
-							취소
+							취소된 일시
 						</th>
 					</tr>
 					<c:set var="list" value="<%=rl %>"/>
 						<c:forEach var="record" items="${list}">
 						<tr>
-							<td>${record.name}</td>
 							<td>${record.email}</td>
 							<td>${record.roomNumber}</td>
 							<td>${record.checkin}</td>
@@ -100,8 +85,7 @@
 							<td>${record.adults}</td>
 							<td>${record.kids}</td>
 							<td>${record.price}</td>
-							<td><a href="admin_change_room.jsp?d=${record.checkin}&e=${record.email}&price=${record.price}" class="btn btn-outline-success">변경하기</a></td>
-							<td><a href="admin_cancel_process.jsp?d=${record.checkin}&e=${record.email}&price=${record.price}" class="btn btn-outline-danger">취소하기</a></td>
+							<td>${record.cancelDate}</td>
 						</tr>
 					</c:forEach>
 				</table>

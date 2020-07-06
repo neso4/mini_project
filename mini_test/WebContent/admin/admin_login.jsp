@@ -12,16 +12,14 @@
 <body>
 	<div class="wrap">
             <div class="form-wrap">
-                <div class="button-wrap">
-                    <button type="button" class="togglebtn">LOG IN</button>
-                </div>
                 <div class="social-icons">
+                <br><br>
                     <img src="../img/logo_edited.jpg" alt="logo">
                 </div>
                 <form id="login" action="admin_login_process.jsp" class="input-group" method="POST">
                     <input type="text" class="input-field" placeholder="User name or Email" name="id" required>
                     <input type="password" class="input-field" placeholder="Enter Password" name="pwd" required>
-                    <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                    <br><br><br><br><br>
                     <button class="submit">Login</button>
                 </form>
             </div>

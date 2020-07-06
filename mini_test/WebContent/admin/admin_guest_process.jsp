@@ -23,6 +23,7 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String custname = request.getParameter("custname");
+	custname += "%";
 	%>
 
 </head>
@@ -37,13 +38,14 @@
 	DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/myoracle");
 	Connection co = ds.getConnection();
 	
-	String sql = "select distinct custname, email, phonenumber,counts from guests"+
-			"left outer join (select custname,count(custname) as counts"+
-			"from guests group by custname) "+ 
-			"using (custname)";
+	String sql = "SELECT DISTINCT custname, email, phonenumber,counts FROM guests " +
+			"LEFT OUTER JOIN (SELECT custname,COUNT(custname) as counts " +
+			"from guests group by custname) " +
+			"using (custname) " +
+            "WHERE custname LIKE ?";
 	PreparedStatement ps = co.prepareStatement(sql);
 	ps.setString(1, custname);
-		ResultSet rs = ps.executeQuery();
+	ResultSet rs = ps.executeQuery();
 	
 	
 	
@@ -51,7 +53,7 @@
 	ArrayList <Guests> rl = new ArrayList<Guests>();
 	while (rs.next()) {
 		rl.add(new Guests(rs.getString(1), rs.getString(2), rs.getString(3),
-				rs.getString(4)));
+				rs.getInt(4)));
 	}
 	rs.close();
 	ps.close();

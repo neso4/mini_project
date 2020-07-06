@@ -19,6 +19,14 @@ public Guests(String custname,String email,String phonenumber, String usedate) {
 	
 }
 
+public Guests(String custname, String email, String phonenumber, int counts) {
+	super();
+	this.custname = custname;
+	this.email = email;
+	this.phonenumber = phonenumber;
+	this.counts = counts;
+}
+
 public String getCustname() {
 	return custname;
 }
@@ -49,6 +57,14 @@ public String getUsedate() {
 
 public void setUsedate(String usedate) {
 	this.usedate = usedate;
+}
+
+public int getCounts() {
+	return counts;
+}
+
+public void setCounts(int counts) {
+	this.counts = counts;
 }
 
 

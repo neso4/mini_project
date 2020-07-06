@@ -12,6 +12,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<%
+	String adminLogin = (String)session.getAttribute("userID");
+	boolean isLogin = false;
+	if(adminLogin != null) {
+		isLogin = true;
+	}
+	if(isLogin == true) {
+		%>
+	
 	<jsp:include page="admin_header.jsp"/>
 	<div class="row">
   		<jsp:include page="admin_sidebar.jsp"/>
@@ -23,5 +32,19 @@
 
   		</div>
 	</div>
+	<%
+	} else { %>
+	<div class="jumbotron" style="background-color:#f8d7da;">
+		<div class="container" style="text-align:center;" >
+			<h1 class="display-1" style="color: #a91c61;'">로그인이 필요한<br> 페이지 입니다.</h1>
+			<img src="../img/warning.png">
+			<a href="admin_login.jsp" class="btn btn-danger btn-lg btn-block">로그인 페이지로</a>
+		</div>
+	</div>
+	<%
+		
+	}
+	%>
+	
 </body>
 </html>

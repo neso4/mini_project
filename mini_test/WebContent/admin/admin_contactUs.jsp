@@ -46,7 +46,6 @@
 		<jsp:include page="admin_sidebar.jsp" />
 		<div class="col-11">
 			<!-- 페이지 내용 -->
-			<!-- 뭘 출력해야할까... -->
 			<div class="jumbotron" style="background-color: aliceblue;">
 				<h1 class="display-4">문의 내용 현황</h1>
 			</div>
