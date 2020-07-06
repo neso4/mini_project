@@ -5,16 +5,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>문의 사항 처리</title>
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<%@page
+	import="java.sql.*, javax.sql.*, javax.naming.*,
+					java.util.*, mini_project.Contact"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	<%@page import="java.sql.*, javax.sql.*, javax.naming.*,
 					java.util.*, java.io.*, mini_project.Contact" %>
 	<%
 	request.setCharacterEncoding("UTF-8");
 	int type = Integer.parseInt(request.getParameter("type"));
-	String title = request.getParameter("title");
-	String content = request.getParameter("content");
-	String name = request.getParameter("name");
-	String phone = request.getParameter("phone");
-	String insertDate = request.getParameter("insertDate");
 	String date = request.getParameter("date");
 	%>
 </head>
@@ -26,16 +33,14 @@
 	DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/myoracle");
 	Connection co = ds.getConnection();
 	
-	String sql = "SELECT * FROM contact WHERE ?";
+	String sql = "SELECT * FROM contact WHERE type = ? and TO_CHAR(insert_date, 'YYYY-MM-DD') LIKE ?";
+	
 	PreparedStatement ps = co.prepareStatement(sql);
+	ps.setInt(1, type);
+	ps.setString(2, date);
 	ResultSet rs = ps.executeQuery();
 	
-	
-	
-	
-	
-	
-	
+
 	ArrayList <Contact> rl = new ArrayList<Contact>();
 	while (rs.next()) {
 		rl.add(new Contact(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),
@@ -45,5 +50,55 @@
 	ps.close();
 	co.close();
 	%>
+	<jsp:include page="admin_header.jsp" />
+	<div class="row">
+		<jsp:include page="admin_sidebar.jsp" />
+		<div class="col-11">
+			<!-- 페이지 내용 -->
+			<div class="jumbotron" style="background-color: aliceblue;">
+				<h1 class="display-4">문의 내용 현황</h1>
+			</div>
+			<form action="contactUs_process.jsp" class="form-horizontal" method="POST" name="contactUs">
+			<div class="selectbox">
+				<select name="type">
+					<option selected>문의유형</option>
+					<option value="1">예약 및 취소 문의</option>
+					<option value="2">객실 문의</option>
+					<option value="3">시설 문의</option>
+					<option value="4">기타 문의</option>
+				</select> 
+			
+		
+				<input type="date" name="date">
+				<input type="submit" class="btn btn-primary"
+							value="찾기">
+			</div>
+			</form>
+			<div>
+				<table class="table table-hover" style="text-align: center;">
+
+					<tr>
+						<th>문의 유형</th>
+						<th>제목</th>
+						<th>내용</th>
+						<th>이름</th>
+						<th>전화번호</th>
+						<th>입력 날짜</th>
+					</tr>
+					<c:set var="list" value="<%=rl %>" />
+					<c:forEach var="record" items="${list}">
+						<tr>
+							<td>${record.type}</td>
+							<td>${record.title}</td>
+							<td>${record.content}</td>
+							<td>${record.name}</td>
+							<td>${record.phone}</td>
+							<td>${record.insertDate}</td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

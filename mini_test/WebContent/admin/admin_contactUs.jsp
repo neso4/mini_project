@@ -51,7 +51,7 @@
 			</div>
 			<form action="contactUs_process.jsp" class="form-horizontal" method="POST" name="contactUs">
 			<div class="selectbox">
-				<select>
+				<select name="type">
 					<option selected>문의유형</option>
 					<option value="1">예약 및 취소 문의</option>
 					<option value="2">객실 문의</option>
