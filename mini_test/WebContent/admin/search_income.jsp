@@ -45,7 +45,7 @@
    			sql = 	"SELECT SUM(price) " +
    					"FROM reservation " +
    					"WHERE TO_CHAR(checkindate, 'YYYY-MM-DD') LIKE ? " +
-   					"GROUP BY TO_CHAR(checkindate, 'YYYY-MM-DD')";
+   					"GROUP BY TO_CHAR(checkindate, 'YYYY-MM-DD') ";
    			ps = co.prepareStatement(sql);
    			ps.setString(1, date);
    			rs = ps.executeQuery();
@@ -112,7 +112,8 @@
 			sql = 	"SELECT TO_CHAR(checkindate, 'YYYY-MM'), SUM(price) " +
 					"FROM reservation " +
 					"WHERE TO_CHAR(checkindate, 'YYYY') LIKE ? " +
-					"GROUP BY TO_CHAR(checkindate, 'YYYY-MM')";
+					"GROUP BY TO_CHAR(checkindate, 'YYYY-MM') "+
+					"ORDER BY TO_CHAR(checkindate, 'YYYY-MM')";
    			ps = co.prepareStatement(sql);
    			ps.setString(1, year);
    			rs = ps.executeQuery();
@@ -193,7 +194,8 @@
 			sql = 	"SELECT TO_CHAR(checkindate, 'YYYY-MM-DD'), SUM(price) " +
 					"FROM reservation " +
 					"WHERE TO_CHAR(checkindate, 'YYYY-MM') LIKE ? "+
-					"GROUP BY TO_CHAR(checkindate, 'YYYY-MM-DD')";
+					"GROUP BY TO_CHAR(checkindate, 'YYYY-MM-DD') "+
+					"ORDER BY TO_CHAR(checkindate, 'YYYY-MM-DD')";
    			ps = co.prepareStatement(sql);
    			ps.setString(1, yearMonth);
    			rs = ps.executeQuery();
