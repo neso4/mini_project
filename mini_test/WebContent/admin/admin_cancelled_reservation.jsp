@@ -41,7 +41,7 @@
    		<!-- 페이지 내용 -->
       	<!-- 뭘 출력해야할까... -->
 			<div class="jumbotron" style="background-color:aliceblue;">
-				<h1 class="display-4">예약 현황</h1>
+				<h1 class="display-4">취소된 예약 현황</h1>
 			</div>
 			<div>
 				<table class="table table-hover" style="text-align:center;">
